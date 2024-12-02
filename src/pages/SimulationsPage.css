@@ -1,0 +1,114 @@
+.simulations-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-header h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.page-header p {
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.simulations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.simulation-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 2rem;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.simulation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  background: var(--primary-color);
+  color: white;
+}
+
+.simulation-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 123, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.simulation-card:hover .simulation-icon {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.simulation-card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.simulation-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.simulation-card:hover p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Dark mode styles */
+.simulations-page.dark .simulation-card {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+.simulations-page.dark .simulation-card p {
+  color: #aaa;
+}
+
+.simulations-page.dark .page-header p {
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .simulations-page {
+    padding: 1rem;
+  }
+
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .simulations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .simulation-card {
+    padding: 1.5rem;
+  }
+} 

@@ -1,0 +1,133 @@
+.logic-gates-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-header h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.page-header p {
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.gates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.gate-card {
+  position: relative;
+  background: #fff;
+  border-radius: 15px;
+  padding: 2rem;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  overflow: hidden;
+}
+
+.gate-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent,
+    transparent,
+    rgba(var(--primary-color-rgb), 0.1),
+    rgba(var(--primary-color-rgb), 0.1),
+    rgba(var(--primary-color-rgb), 0.2),
+    transparent,
+    transparent
+  );
+  transform: rotate(30deg);
+  transition: 0.8s;
+  opacity: 0;
+}
+
+.gate-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+  box-shadow: 0 5px 20px rgba(0, 123, 255, 0.2);
+}
+
+.gate-card:hover::after {
+  opacity: 1;
+  transform: rotate(30deg) translate(50%, -50%);
+}
+
+.gate-card h2 {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.gate-card:hover h2 {
+  color: var(--primary-dark);
+}
+
+/* Dark mode styles */
+.logic-gates-page.dark .gate-card {
+  background: #2a2a2a;
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logic-gates-page.dark .gate-card:hover {
+  box-shadow: 0 5px 20px rgba(0, 123, 255, 0.3);
+}
+
+.logic-gates-page.dark .gate-card h2 {
+  color: var(--primary-light);
+}
+
+.logic-gates-page.dark .gate-card:hover h2 {
+  color: var(--primary-color);
+}
+
+.logic-gates-page.dark .page-header p {
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .logic-gates-page {
+    padding: 1rem;
+  }
+
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .gates-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gate-card {
+    padding: 1.5rem;
+  }
+}
