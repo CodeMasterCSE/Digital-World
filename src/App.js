@@ -8,8 +8,6 @@ import LogicGatesPage from './pages/LogicGates/LogicGatesPage';
 import LogicGateDetail from './pages/LogicGates/LogicGateDetail';
 import SimulationsPage from './pages/SimulationsPage';
 import LogicGateSimulatorPage from './pages/LogicGateSimulatorPage';
-import NumberSystemsPage from './pages/NumberSystemsPage';
-import NumberSystemSimulatorPage from './pages/NumberSystemSimulatorPage';
 import './App.css';
 
 function App() {
@@ -30,10 +28,8 @@ function App() {
             <Route path="/resources" element={<ResourcesPage isDarkMode={isDarkMode} />} />
             <Route path="/resources/logic-gates" element={<LogicGatesPage isDarkMode={isDarkMode} />} />
             <Route path="/resources/logic-gates/:gateType" element={<LogicGateDetail isDarkMode={isDarkMode} />} />
-            <Route path="/resources/number-systems" element={<NumberSystemsPage isDarkMode={isDarkMode} />} />
             <Route path="/simulations" element={<SimulationsPage isDarkMode={isDarkMode} />} />
             <Route path="/simulations/logic-gates" element={<LogicGateSimulatorPage isDarkMode={isDarkMode} />} />
-            <Route path="/simulations/number-systems" element={<NumberSystemSimulatorPage isDarkMode={isDarkMode} />} />
           </Routes>
         </main>
         <Footer isDarkMode={isDarkMode} />

@@ -10,13 +10,6 @@ const ResourcesPage = ({ isDarkMode }) => {
       description: 'Learn about different types of logic gates: AND, OR, NOT, NAND, NOR, XOR, and XNOR gates.',
       icon: 'fa-microchip',
       link: '/resources/logic-gates'
-    },
-    {
-      id: 'number-systems',
-      title: 'Number Systems',
-      description: 'Explore different number systems: Binary, Decimal, Hexadecimal, and Octal. Learn conversion techniques.',
-      icon: 'fa-calculator',
-      link: '/resources/number-systems'
     }
   ];
 

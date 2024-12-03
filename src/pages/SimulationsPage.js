@@ -10,13 +10,6 @@ const SimulationsPage = ({ isDarkMode }) => {
       description: 'Experiment with different logic gates and create digital circuits.',
       icon: 'fa-microchip',
       link: '/simulations/logic-gates'
-    },
-    {
-      id: 'number-systems',
-      title: 'Number System Converter',
-      description: 'Convert numbers between different number systems: Binary, Decimal, Hexadecimal, and Octal.',
-      icon: 'fa-calculator',
-      link: '/simulations/number-systems'
     }
   ];
 
