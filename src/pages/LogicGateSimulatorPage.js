@@ -31,6 +31,12 @@ const gates = [
 
 const LogicGateSimulatorPage = ({ isDarkMode }) => {
   const [selectedGate, setSelectedGate] = useState(gates[0]);
+  const [simulatorKey, setSimulatorKey] = useState(0);
+
+  const handleGateChange = (gate) => {
+    setSelectedGate(gate);
+    setSimulatorKey(prevKey => prevKey + 1);
+  };
 
   return (
     <div className={`simulator-page ${isDarkMode ? 'dark' : ''}`}>
@@ -45,7 +51,7 @@ const LogicGateSimulatorPage = ({ isDarkMode }) => {
             <button
               key={gate.id}
               className={`gate-button ${selectedGate.id === gate.id ? 'active' : ''}`}
-              onClick={() => setSelectedGate(gate)}
+              onClick={() => handleGateChange(gate)}
             >
               {gate.name}
             </button>
@@ -53,7 +59,11 @@ const LogicGateSimulatorPage = ({ isDarkMode }) => {
         </div>
 
         <div className="simulator-content">
-          <LogicGateSimulator gateType={selectedGate.id} />
+          <LogicGateSimulator 
+            key={simulatorKey}
+            gateType={selectedGate.id}
+            isDarkMode={isDarkMode}
+          />
         </div>
       </div>
     </div>
