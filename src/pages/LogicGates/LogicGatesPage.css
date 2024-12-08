@@ -20,6 +20,25 @@
   font-size: 1.2rem;
 }
 
+.gate-category {
+  margin-bottom: 4rem;
+}
+
+.category-header {
+  margin-bottom: 2rem;
+}
+
+.category-header h2 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.category-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
 .gates-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -110,7 +129,8 @@
   color: var(--primary-color);
 }
 
-.logic-gates-page.dark .page-header p {
+.logic-gates-page.dark .page-header p,
+.logic-gates-page.dark .category-header p {
   color: #aaa;
 }
 
@@ -121,6 +141,10 @@
 
   .page-header h1 {
     font-size: 2rem;
+  }
+
+  .category-header h2 {
+    font-size: 1.5rem;
   }
 
   .gates-grid {

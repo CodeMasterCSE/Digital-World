@@ -2,30 +2,51 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './LogicGatesPage.css';
 
-const gatesData = [
+const gateCategories = [
   {
-    id: 'and',
-    name: 'AND Gate',
+    id: 'basic',
+    title: 'Basic Gates',
+    description: 'Fundamental building blocks of digital circuits',
+    gates: [
+      {
+        id: 'and',
+        name: 'AND Gate',
+      },
+      {
+        id: 'or',
+        name: 'OR Gate',
+      },
+      {
+        id: 'not',
+        name: 'NOT Gate',
+      }
+    ]
   },
   {
-    id: 'or',
-    name: 'OR Gate',
+    id: 'universal',
+    title: 'Universal Gates',
+    description: 'Gates that can be used to implement any Boolean function',
+    gates: [
+      {
+        id: 'nand',
+        name: 'NAND Gate',
+      },
+      {
+        id: 'nor',
+        name: 'NOR Gate',
+      }
+    ]
   },
   {
-    id: 'not',
-    name: 'NOT Gate',
-  },
-  {
-    id: 'nand',
-    name: 'NAND Gate',
-  },
-  {
-    id: 'nor',
-    name: 'NOR Gate',
-  },
-  {
-    id: 'xor',
-    name: 'XOR Gate',
+    id: 'exclusive',
+    title: 'Exclusive Gates',
+    description: 'Gates that perform exclusive operations',
+    gates: [
+      {
+        id: 'xor',
+        name: 'XOR Gate',
+      }
+    ]
   }
 ];
 
@@ -37,17 +58,26 @@ const LogicGatesPage = ({ isDarkMode }) => {
         <p>Learn about different types of logic gates and their operations</p>
       </div>
 
-      <div className="gates-grid">
-        {gatesData.map(gate => (
-          <Link 
-            to={`/resources/logic-gates/${gate.id}`} 
-            key={gate.id} 
-            className="gate-card"
-          >
-            <h2>{gate.name}</h2>
-          </Link>
-        ))}
-      </div>
+      {gateCategories.map(category => (
+        <div key={category.id} className="gate-category">
+          <div className="category-header">
+            <h2>{category.title}</h2>
+            <p>{category.description}</p>
+          </div>
+          
+          <div className="gates-grid">
+            {category.gates.map(gate => (
+              <Link 
+                to={`/resources/logic-gates/${gate.id}`} 
+                key={gate.id} 
+                className="gate-card"
+              >
+                <h2>{gate.name}</h2>
+              </Link>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
