@@ -8,6 +8,8 @@ import LogicGatesPage from './pages/LogicGates/LogicGatesPage';
 import LogicGateDetail from './pages/LogicGates/LogicGateDetail';
 import SimulationsPage from './pages/SimulationsPage';
 import LogicGateSimulatorPage from './pages/LogicGateSimulatorPage';
+import NandImplementation from './pages/LogicGates/NandImplementation';
+import NorImplementation from './pages/LogicGates/NorImplementation';
 import './App.css';
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
             <Route path="/resources/logic-gates/:gateType" element={<LogicGateDetail isDarkMode={isDarkMode} />} />
             <Route path="/simulations" element={<SimulationsPage isDarkMode={isDarkMode} />} />
             <Route path="/simulations/logic-gates" element={<LogicGateSimulatorPage isDarkMode={isDarkMode} />} />
+            <Route path="/resources/logic-gates/nand-implementation" element={<NandImplementation />} />
+            <Route path="/resources/logic-gates/nor-implementation" element={<NorImplementation />} />
           </Routes>
         </main>
         <Footer isDarkMode={isDarkMode} />

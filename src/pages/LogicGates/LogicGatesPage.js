@@ -78,6 +78,28 @@ const LogicGatesPage = ({ isDarkMode }) => {
           </div>
         </div>
       ))}
+
+      <div className="gate-category">
+        <div className="category-header">
+          <h2>Implementation of Universal Gates</h2>
+          <p>Explore how universal gates can be used to implement other gates</p>
+        </div>
+        
+        <div className="gates-grid">
+          <Link 
+            to="/resources/logic-gates/nand-implementation" 
+            className="gate-card"
+          >
+            <h2>NAND Gate</h2>
+          </Link>
+          <Link 
+            to="/resources/logic-gates/nor-implementation" 
+            className="gate-card"
+          >
+            <h2>NOR Gate</h2>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

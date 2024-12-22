@@ -1,0 +1,73 @@
+.nand-implementation-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nand-implementation-page h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.nand-implementation-page p {
+  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.implementation-details {
+  text-align: left;
+}
+
+.implementation-details h2 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
+.implementation-details img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logic-expression {
+  color: #007bff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  background-color: #e9f5ff;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.nand-implementation-page.dark .logic-expression {
+  color: #80d4ff;
+  background-color: #1a2a3a;
+}
+
+/* Dark mode styles */
+.nand-implementation-page.dark {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.nand-implementation-page.dark p,
+.nand-implementation-page.dark .implementation-details p {
+  color: #ccc;
+}
+
+.nand-implementation-page.dark .implementation-details h2 {
+  color: var(--primary-light);
+}
+
+.nand-implementation-page.dark .implementation-details img {
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
